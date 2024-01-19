@@ -1,4 +1,4 @@
-# yt-thumb-downloader
+# bat-yt-thumb-downloader
 A simple YouTube video thumbnail downloader written in Batch. 
 
 (Bash? uhh not yet. Later oke?)
