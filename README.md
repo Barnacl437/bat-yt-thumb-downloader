@@ -5,6 +5,7 @@ A simple YouTube video thumbnail downloader written in Batch.
 
 ## ...How?
 This small script will try to download YouTube thumbnail images using a specified universal image URL for every video.
+The size and filename for downloaded image is maxresdefault.jpg, which is an optimal choice for bigger, better image output.
 Just type the playback ID, which looks like this: (youtube.com/watch?v=)**9EtbggRB51g** (the 11 random characters, digits and dashes).
 I think that for convenient, this script should be able to handle full-URL input and then cut the part before the playback ID, but well uhhh
 I'm not gonna implement that yet. 
