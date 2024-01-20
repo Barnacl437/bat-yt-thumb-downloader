@@ -11,7 +11,7 @@ I think that for convenient, this script should be able to handle full-URL input
 I'm not gonna implement that yet. 
 
 ## Note
-currently this script supports ```curl``` and ```wget``` downloading, however I just finished the ```curl``` thing. So as of now only ```curl``` work. Well will add another more soon.
+This script uses cURL and wget to download thingies, so currently this script supports via-```curl``` and ```wget``` downloading, however I just finished the ```curl``` thing. So as of now only ```curl``` work. Well will add another more soon.
 You can also add your own URL fetcher/getter/downloader if you want. Yes.
 
 ## Kontreebooshun 
