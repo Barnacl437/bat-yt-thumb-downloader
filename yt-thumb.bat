@@ -1,4 +1,7 @@
 @echo off 
+rem note: find some weird characters and numbers between echo lines? They are actually ANSI colouring syntaxes, particularly "ANSI Escape Sequences" used for encoding-level markdown. 
+
+rem You can look for reference here: https://stackoverflow.com/questions/2048509/how-to-echo-with-different-colors-in-the-windows-command-line
 :init
 set ver=0.1
 set name=bat-yt-thumb-downloader
