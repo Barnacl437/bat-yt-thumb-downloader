@@ -11,8 +11,9 @@ I think that for convenient, this script should be able to handle full-URL input
 I'm not gonna implement that yet. 
 
 ## Note
-This script uses cURL and wget to download thingies, so currently this script supports via-```curl``` and ```wget``` downloading, however I just finished the ```curl``` thing. So as of now only ```curl``` work. Well will add another more soon.
+This script uses [cURL](https://curl.se) and [wget](https://www.gnu.org/software/wget/) to download thingies, so currently this script supports via-```curl``` and ```wget``` downloading, however I just finished the ```curl``` thing. So as of now only ```curl``` work. Well will add another more soon.
 You can also add your own URL fetcher/getter/downloader if you want. Yes.
+[update on 2024/01/04] I'm temporarily delaying the write so this may sounds like I'm committing useless stuff, but I think I will work back on this soon(TM), prob in one or two weeks. 
 
 ## Kontreebooshun 
 This thing is currently in progress. All contributions are welcome to improve this one. Or probably write a Bash port for it. idk do wtf u want im suck @ coding lel
