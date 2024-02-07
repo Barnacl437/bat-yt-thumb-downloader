@@ -3,7 +3,7 @@ rem note: find some weird characters and numbers between echo lines? They are ac
 
 rem You can look for reference here: https://stackoverflow.com/questions/2048509/how-to-echo-with-different-colors-in-the-windows-command-line
 :init
-set ver=0.1
+set ver=0.2-test
 set name=bat-yt-thumb-downloader
 set phrase=just a YouTube video downloader written in Windows Batch.
     cls
@@ -99,7 +99,7 @@ set /p saveloc=Location and filename:
 set /p curl-args=Arguments (optional):
 :curl-confirm
     echo Got the information. Your code now may look like this:
-    echo curl https://img.youtube.com/vi/%playbackid%/maxresdefault.jpg -o %saveloc%%playbackid%-maxresdefault.jpg %args%
+    echo wget https://img.youtube.com/vi/%playbackid%/maxresdefault.jpg -o %saveloc%%playbackid%-maxresdefault.jpg %args%
     set /p dl-curl-confirm=Do you want to proceed?(yes/no/back) 
         if %dl-curl-confirm%==yes goto curl-download
         if %dl-curl-confirm%==no goto cli
