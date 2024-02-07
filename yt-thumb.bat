@@ -24,6 +24,8 @@ else goto cli
 :helper
 echo %name% version %ver%. 
 echo Currently only curl and wget supported.
+echo Please install curl or wget if you haven't. Or you can modify to 
+echo allow this script to use another tool as you want.
 echo [101;93m commands [0m 		description
 echo download 		go to the downloader.
 echo cmd      		open system command prompt.
@@ -38,8 +40,8 @@ echo that YouTube video) with easy-to-use semi-CLI mode.
 echo This is a [4mfree software[0m licenced under [7mWTFPL v2[0m. You are free to copy, distribute, modify
 echo and commercialise this, with or without the licence verbatim (as long as the name changed)
 echo according to Sam Hocevar.
-echo Honestly, personally I don't think this is worth commercialising, since it has no ac-
-echo tual value to be sold. It's recommended to keep it free.
+echo Honestly, personally I don't think this is worth commercialising, since it has no actual
+echo value to be sold. It's recommended to keep it free.
 echo Ognl. written by barnacl437, 2024. 
 echo Find my GitHub here: [91mhttps://github.com/barnacl437[0m
 goto cli
@@ -60,13 +62,13 @@ set /p method=Choose one (wget, curl, back):
 else goto cli
 
 :dl-curl
-echo So you chose curl method. Now proceeding...
+echo So you chose %method% method. Now proceeding...
 echo Please type playback ID below. It looks like this and located in here: 
 echo youtube.com/watch?v=[7mabcdef123-_[0m (don't leave any space for sure)
 set /p playbackid=Playback ID: 
 echo Now type the folder path where you want to save. Otherwise it will save in the same 
 echo place as the script file. Path must end with "/" (slash) if you don't want things
-echo to break, sorry for this, I will try to fix this later if you want.
+echo to break.
 echo Default is %playbackid%-maxresdefault.jpg.
 set /p saveloc=Location and filename:
 set /p curl-args=Arguments (optional):
@@ -83,5 +85,31 @@ echo Downloading...
 curl https://img.youtube.com/vi/%playbackid%/maxresdefault.jpg -o %saveloc%/%playbackid%-maxresdefault.jpg %args%
 echo Done.
 goto cli
+
+:dl-wget
+echo So you chose %method% method. Now proceeding...
+echo Please type playback ID below. It looks like this and located in here: 
+echo youtube.com/watch?v=[7mabcdef123-_[0m (don't leave any space for sure)
+set /p playbackid=Playback ID: 
+echo Now type the folder path where you want to save. Otherwise it will save in the same 
+echo place as the script file. Path must end with "/" (slash) if you don't want things
+echo to break.
+echo Default is %playbackid%-maxresdefault.jpg.
+set /p saveloc=Location and filename:
+set /p curl-args=Arguments (optional):
+:curl-confirm
+    echo Got the information. Your code now may look like this:
+    echo curl https://img.youtube.com/vi/%playbackid%/maxresdefault.jpg -o %saveloc%%playbackid%-maxresdefault.jpg %args%
+    set /p dl-curl-confirm=Do you want to proceed?(yes/no/back) 
+        if %dl-curl-confirm%==yes goto curl-download
+        if %dl-curl-confirm%==no goto cli
+        if %dl-curl-confirm%==back goto dl-curl
+    else goto curl-confirm
+:curl-download
+echo Downloading...
+wget https://img.youtube.com/vi/%playbackid%/maxresdefault.jpg -o %saveloc%/%playbackid%-maxresdefault.jpg %args%
+echo Done.
+goto cli
+
 
 else goto cli
