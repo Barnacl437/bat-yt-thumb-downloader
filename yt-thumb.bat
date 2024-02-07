@@ -13,7 +13,7 @@ echo ----------------------------------------------
 :cli
 set /p cli=input: 
 
-    if %cli% == help goto helper
+    if %cli% == help goto help
     if %cli% == info goto info
     if %cli% == download goto download
     if %cli% == cmd goto cmd-prmpt
@@ -21,7 +21,7 @@ set /p cli=input:
 else goto cli
 
 
-:helper
+:help
 echo %name% version %ver%. 
 echo Currently only curl and wget supported.
 echo Please install curl or wget if you haven't. Or you can modify to 
