@@ -1,5 +1,6 @@
 # bat-yt-thumb-downloader
 A simple YouTube video thumbnail downloader written in Windows Batch. 
+Just for fun, and also for manipulating my Batch skill. It has no actual use tho. I plan to write it in Bash later but probably contributions can help.
 
 (Bash? uhh not yet. Later oke?)
 
