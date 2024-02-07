@@ -4,6 +4,10 @@ Just for fun, and also for manipulating my Batch skill. It has no actual use tho
 
 (Bash? uhh not yet. Later oke?)
 
+## About the test branch
+This is a test branch where a lot of changes can be committed at once to make a quick fix and a way to experiment changes in script. I recommend
+any continuous changes and/or quick fixes to be here so that it will be a better place for testing and keep the main branch clean and tidy.
+
 ## ...How?
 This small script will try to download YouTube thumbnail images using a specified universal image URL for every video.
 The size and filename for downloaded image is maxresdefault.jpg, which is an optimal choice for bigger, better image output.
